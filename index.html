@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <title>Task Manager</title>
+</head>
+<body>
+    <form class="form">
+        <div class="form-group  form-top flex-row">
+            <h2>Add Task</h2>
+            <button type="button" id="close">
+                <i class="fas fa-window-close"></i>
+            </button>
+        </div>
+        <div class="form-group flex-column">
+            <label for="title">Title of the Project</label>
+            <input type="text" name="title" id="title">
+        </div>
+        <div class="form-group flex-column">
+            <label for="description">Description of the Project</label>
+            <input id="description" type="text">
+        </div>
+        <div class="form-group flex-column">
+            <label for="deadline">Deadline of the Project</label>
+            <input type="datetime-local" name="deadline" id="deadline" min="2022-07-24T00:00" max="">
+        </div>
+
+        <div class="buttons form-group flex-row">
+            <button type="reset">Cancel</button>
+            <button id="submit" type="submit">Add Task</button>
+        </div>
+    </form>
+
+    <div class="main">
+        <header class="header flex-row">
+            <button>
+                <i class="fas fa-user"></i>
+            </button>
+            <button  id="add-task">Add Task</button>
+        </header>
+
+        <div class="tasks-container flex-row">
+            <div class="task-group-1">
+                <h2>Not Completed</h2>
+                <ul class="tasks not-complete">
+
+                
+                </ul>
+
+
+            </div>
+            <div class="task-group-2">
+                <h2>Completed</h2>
+                <ul class="tasks complete-list">
+
+                    
+                   
+                </ul>
+
+
+            </div>
+
+        </div>
+
+        <form class="form2">
+            <div class="form-group  form-top flex-row">
+                <h2>Edit Task</h2>
+                <button type="button" id="close1">
+                    <i class="fas fa-window-close"></i>
+                </button>
+            </div>
+            <div class="form-group flex-column">
+                <label for="title">Title of the Project</label>
+                <input type="text" name="title" id="title">
+            </div>
+            <div class="form-group flex-column">
+                <label for="description">Description of the Project</label>
+                <input id="description" type="text">
+            </div>
+            <div class="form-group flex-column">
+                <label for="deadline">Deadline of the Project</label>
+                <input type="datetime-local" name="deadline" id="deadline" min="2023-07-24T00:00" max="">
+            </div>
+    
+            <div class="buttons form-group flex-row">
+                <button type="reset">Cancel</button>
+                <button id="submit2" type="submit">Edit Task</button>
+            </div>
+        </form>
+
+
+
+    </div>
+
+
+
+
+
+
+ 
+
+
+
+    <script type = "module" src="./assets/script.js"></script>
+</body>
+</html>

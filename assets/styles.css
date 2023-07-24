@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #BDE0FE;
+    display: grid;
+    justify-content: center;
+    place-items: center;
+    width: 100vw;
+}
+.main{
+    width: 97vw;
+    position: static;
+}
+.header{
+    padding: 12px;
+}
+.form, .form2{
+    margin-top: 5%;
+    background-color: #fff;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 2%;
+    display: none;
+}
+.form2{
+    top: 8%;
+   
+}
+.form h2, .form2 h2{
+    color: #263F56;
+}
+
+
+input{
+    outline: none;
+    font-size: 24px;
+    border: none;
+    background-color: #263F56;
+    color: #fff;
+}
+input:focus{
+    color: #fff;
+}
+.buttons,.form-top, .header{
+    margin-top: 24px;
+}
+
+.form-top button, .header button{
+    all: unset;
+}
+#add-task{
+    background-color: #CDB4DB;
+    color: #fff;
+    
+}
+.form-group{
+    margin: 12px;
+}
+.form button,#add-task, .form2 button{
+    padding: 6px 15px;
+}
+.flex-column, .flex-row{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.flex-row{
+    flex-direction: row;
+}
+
+.tasks-container h2{
+     background-color: #FFAFCC;
+     padding: 4px 8px;
+
+}
+.task-group-2 h2{
+    background-color: #263F56;
+    color: #fff;
+}
+.tasks li{
+    list-style: none;
+    border-left: 10px solid #FFAFCC;
+    background-color: rgba(255,175,204,0.5);
+    margin-top: 5%;
+    padding: 12px;
+}
+.tasks li:last-child{
+    margin-bottom: 5%;
+}
+.task-group-2 li{
+    background-color: rgba(38,63,86,0.5);
+    border-left: 10px solid #263F56;
+
+}
+.tasks{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-gap: 12px;
+}
+.tasks-container h2{
+  width: 80%;
+  
+}
+.task button{
+    padding: 4px 12px;
+}
+@media only screen and (max-width: 600px) {
+	.tasks-container{
+        flex-direction: column;
+        width: 80%;
+        margin: auto;
+    }
+    .form{
+        width: 90%;
+    }
+    .tasks{
+        grid-template-columns: 1fr;
+    }
+    .tasks-container h2{
+        width: auto;
+        
+    }
+
+}
+@media only screen and (max-width: 940px ) and (min-width: 580px){
+    .task .buttons{
+        flex-direction: column;
+        display: flex;
+        
+       
+    }
+    .task button{
+        margin-bottom: 12px;
+    }
+
+}
