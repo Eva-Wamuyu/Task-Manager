@@ -17,6 +17,33 @@ document.querySelector("#close1").onclick = ()=>{
     form2.style.display = "none";
 
 }
+function getTimeAndFormatIt() {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    return `${year}-${month}-${day}T${hours}:${minutes}`;
+}
+
+function renderDateMin(){
+    const input = document.createElement("input");
+    const input2 = document.createElement("input");
+
+    input.type = 'datetime-local';
+    input2.type = 'datetime-local';
+    input.id = 'deadline';
+    input2.id = 'deadline';
+    input.min = getTimeAndFormatIt();
+    input2.min = getTimeAndFormatIt();
+
+    document.querySelector('.deadline-container').appendChild(input)
+    document.querySelector('.deadline2-container').appendChild(input2)
+    
+}
+
+renderDateMin()
 
 
 form.addEventListener("submit",(e)=>{

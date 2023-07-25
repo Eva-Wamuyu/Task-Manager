@@ -54,7 +54,7 @@ input:focus{
     all: unset;
 }
 #add-task{
-    background-color: #CDB4DB;
+    background-color: #263F56;
     color: #fff;
     
 }
@@ -81,6 +81,14 @@ input:focus{
 .task-group-2 h2{
     background-color: #263F56;
     color: #fff;
+    
+}
+.task-group-2 div{
+    height: 20%;
+    position: relative;
+    top: 0;
+    
+
 }
 .tasks li{
     list-style: none;
@@ -99,17 +107,39 @@ input:focus{
 }
 .tasks{
     display: grid;
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 12px;
+}
+.task{
+    height: 100%;
 }
 .tasks-container h2{
   width: 80%;
   
 }
+
+
 .task button{
     padding: 4px 12px;
 }
-@media only screen and (max-width: 600px) {
+button{
+    border: none;
+}
+.complete-button{
+    background-color: #263F56;
+    color: white;
+}
+.delete-button, .delete-button-complete{
+    background-color: #BDE0FE;
+    
+    
+}
+.delete-button-complete{
+    margin-bottom: 12px;
+    
+}
+
+@media only screen and (max-width: 700px) {
 	.tasks-container{
         flex-direction: column;
         width: 80%;
@@ -124,6 +154,9 @@ input:focus{
     .tasks-container h2{
         width: auto;
         
+    }
+    .task-group-2{
+        margin-top: 10%;
     }
 
 }
